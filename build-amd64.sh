@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mkdir build-amd64 > /dev/null
-cd build-amd64
-cmake .. -DCMAKE_INSTALL_PREFIX=/app/release/
+mkdir /app/build-amd64 > /dev/null
+cd /app/build-amd64
+cmake ..
 make -j $(nproc)
-make install
+cp /app/build-amd64/src/signallingsimulator /app/release/signallingsimulator-amd64

@@ -26,12 +26,15 @@ RUN \
     make --jobs=$NPROC JOBS=$NPROC MXE_TARGETS='x86_64-w64-mingw32.static' qtbase qtserialport && \
     exit 0
 
+RUN mkdir /opt/pi && cd /opt/pi && git clone https://github.com/raspberrypi/tools
 
 ENV PATH="${PATH}:/opt/mxe/usr/bin"
 
 COPY build-multi.sh /build.sh
 COPY build-win64s.sh /build-win64s.sh
 COPY build-amd64.sh /build-amd64.sh
+COPY build-arm64.sh /build-arm64.sh
+COPY build-arm64.sh /build-arm32.sh
 
 RUN chmod +x /build*.sh
 

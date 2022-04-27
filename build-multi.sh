@@ -1,13 +1,15 @@
 #!/bin/sh
 
 /build-win64s.sh 
-
-mv release/signallingsimulator.exe release/signallingsimulator-win64.exe
-
-rm -rf build
+cd /app
 
 /build-amd64.sh
+cd /app
 
-mv release/signallingsimulator release/signallingsimulator-amd64
+# /build-arm64.sh
+# cd /app
+# mv /app/release/signallingsimulator /app/release/signallingsimulator-arm64
 
-rm -rf build
+# /build-arm32.sh
+# cd /app
+# mv /app/release/signallingsimulator /app/release/signallingsimulator-arm32
