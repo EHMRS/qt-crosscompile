@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mkdir /app/release
+
 /build-win64s.sh 
 cd /app
 
