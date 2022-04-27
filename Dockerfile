@@ -12,7 +12,7 @@ RUN \
         libffi-dev libgdk-pixbuf2.0-dev libltdl-dev libssl-dev libtool-bin \
         libxml-parser-perl lzip make nano openssl p7zip-full patch perl \
         pkg-config python3 python3-mako ruby scons sed unzip wget xz-utils \
-        build-essential cmake qtbase5-dev libqt5serialport5-dev && \
+        build-essential cmake qtbase5-dev libqt5serialport5-dev python-is-python3 && \
     apt -y autoremove && \
     apt -y autoclean && \
     apt -y clean && \
